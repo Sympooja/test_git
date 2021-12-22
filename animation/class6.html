@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        width: 100%;
+        background: brown;
+        
+    }
+    .social-site-icons {
+        margin-top: 50px;
+        justify-content: center;
+    }
+
+    .flex-hero {
+        display: flex;
+    }
+
+    .social-links {
+        display: flex;
+    }
+
+    .social-links a {
+        width: 65px;
+        height: 64px;
+        text-align: center;
+        text-decoration: none;
+        color: #000;
+        box-shadow: 0 0 20px 10px rgb(0 0 0 / 5%);
+        margin: 0 15px;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.5s;
+        color: 3fff;
+        color: #fff;
+    }
+
+    .social-links a .fab {
+        font-size: 30px;
+        line-height: 65px;
+        position: relative;
+        z-index: 10;
+        transition: color 0.5s;
+    }
+
+    .social-links a::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: -90px;
+        left: 0;
+        background: #000;
+        position: absolute;
+        transition: 0.5s;
+    }
+
+    .social-links a:hover {
+        transform: translateY(-10px);
+    }
+
+    .social-links a:hover .fab {
+        color: #fff;
+    }
+
+    .social-links a:hover::after {
+        top: 0;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="social-site-icons row">
+            <div class="flex-hero">
+                <div class="social-links"
+                    style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInDown;">
+                    <a target="_blank" href="">
+                        <i class="fab fa-facebook-f"></i> </a>
+                </div>
+                <div class="social-links"
+                    style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInDown;">
+                    <a target="_blank" href="">
+                        <i class="fab fa-instagram"></i> </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
