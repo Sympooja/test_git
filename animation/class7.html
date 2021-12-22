@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button hover effects</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<style>
+    ::before,
+    ::after {
+        position: absolute;
+        content: "";
+    }
+
+    .btn {
+        position: relative;
+        display: inline-block;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0px;
+        min-width: 150px;
+        padding: 0px;
+    }
+
+    .btn a {
+        position: relative;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 20px;
+        transition: 0.3s;
+    }
+
+    /*--- btn-1 ---*/
+    .btn-1::before {
+        background-color: rgb(28, 31, 30);
+        transition: 0.3s ease-out;
+    }
+
+    .btn-1 a {
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(28, 31, 30);
+        transition: 0.2s 0.1s;
+    }
+
+    .btn-1 a:hover {
+        color: rgb(28, 31, 30);
+        transition: 0.2s 0.1s;
+    }
+
+
+
+    /* 3.hover-filled-slide-left */
+    .btn.hover-filled-slide-left::before {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .btn.hover-filled-slide-left:hover::before {
+        width: 0%;
+    }
+</style>
+
+
+<body>
+
+
+    <div class="btn btn-1 hover-filled-slide-left" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200">
+        <a href="<?php the_field('button_link'); ?>" class="base-button">
+            <?php the_field('section_3_right_button'); ?>
+        </a>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
