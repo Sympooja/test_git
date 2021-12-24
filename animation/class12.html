@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image hover effects</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        overflow: hidden;
+        background: #262626;
+    }
+
+    .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .box {
+        position: relative;
+        width: 300px;
+        height: 450px;
+        background: transparent;
+        padding: 20px;
+        border: 1px solid #fff;
+    }
+
+    .image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #262626;
+        z-index: 2;
+        transform-origin: left;
+        transition: 1s;
+        transform: perspective(2000px) rotateY(0deg);
+    }
+
+    .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .content{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 1;
+        transform-origin: left;
+        transition: 1s;
+        transform: perspective(2000px) rotateY(90deg);
+        padding: 25px;
+        text-align: justify;
+        box-sizing: border-box;
+    }
+    .box:hover .image{
+        transform: perspective(2000px) rotateY(-90deg);
+    }
+    .box:hover .content{
+        transform: perspective(2000px) rotateY(0deg);
+    }
+    .content h1{
+        font-size: 18px;
+        color: #262626;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .content p{
+        font-size: 16px;
+        color: #262626;
+        padding-bottom: 20px;
+    }
+    .btn {
+    color: #000;
+    border: 1px solid #000;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+.btn:hover {
+    background: #000;
+    color: #fff;
+}
+</style>
+
+<body>
+    <div class="center">
+        <div class="box">
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1555057918-9aadd809fb71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dGhlJTIwc291cmNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+            </div>
+            <div class="content">
+                <h1>first card</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eveniet vero molestias commodi
+                    mollitia consequatur, dolor suscipit in! Ut eos consectetur doloribus necessitatibus distinctio
+                    ipsum harum molestias magnam eum, nesciunt placeat, quasi in saepe vero molestias commodi
+                    mollitia consequatur, dolor suscipit in! Ut eos consectetur doloribus necessitatibus vero molestias commodi
+                    mollitia consequatur, dolor suscipit in! Ut eos consectetur doloribus necessitatibus vero molestias commodi
+                    mollitia consequatur, dolor suscipit in! Ut eos consectetur doloribus necessitatibus.</p>
+                    <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
